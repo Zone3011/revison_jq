@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+    <link rel="stylesheet" href="my.css">
+    <script>
+        $(document).ready(function () {
+            // sentex is this $('selecter').action()
+            $('p').click(function () {
+                // console.log("moona")
+                // $(this).hide()
+                $(this).css("background-color", "green")
+    
+            });
+        
+        // there are 3 main type of selecter
+        //  1,id means # and name of id
+        $('.1').click(function () {
+            alert("click on p1")
+    
+    
+        });
+    
+        //  2,class means . and name of id 
+        $("#2").click(function () {
+            confirm("click on p2")
+        });
+        //  3,Element selecter means name of tag that worke in all enlment 
+        $("p").click(function () {
+            prompt("you click on p tag")
+        });
+        // 4 click * so click on every element
+        // $("*").click(function () {
+                                        //     $("p").html("mona is grate ")
+                                        // });
+                                        // 5 name of tag.classname
+                                        $("p.1").click(function () {
+                                            $(".nirav").css("background-color", "black")
+                                        });
+                                    // 6 name of possispn
+                                    $("P:first").click(function () {
+                                        $(".nirav").css("background-color", "blue")
+                                    });
+    
+                                    // dobbul clike
+                                    $("#b1").dblclick(function () {
+                                        $(".nirav").hide("40px")
+                                    });
+                                    $("#b1").dblclick(function () {
+                                        $(".nirav").show("40px")
+                                    });
+                                    // mouseover
+                                    $("#b1").mouseover(function () {
+                                        $(".nirav1").slideToggle()
+                                    });
+                                    // mouseenter
+                                    $(".mona").mouseenter(function () {
+                                        $(this).css("background-color", "red")
+                                    });
+                                    // mouseleave
+                                    $(".mona").mouseleave(function () {
+                                        $(this).css("background-color", "gold")
+                                    });
+                                    $(".ha").mouseup(function(){
+                                        $(".ha").css("background-color", "black")
+                                    });
+    
+    
+                                    // on method
+                                    $("#i3").on({
+                                        focus:function(){
+                                        $(this).innerHeight("200px");
+        },
+                                    mouseleave:function(){
+                                        $(this).innerWidth("200px");
+        },
+                                    click:function(){
+                                        $(this).css("backgroud-color", "black");
+        }
+    
+        
+    });
+                                    $("#i3").keydown(function(){
+                                        $(".ha").css("backgroud-color", "black");
+    });
+                                    $("#ani").click(function(){
+                                        $("#yash").animate({
+                                            left: '250px',
+                                            opacity: '0.5',
+                                            height: '150px',
+                                            width: '150px'
+                                        });
+                                        
+    });
+    $(function(){
+        $("div").draggable();
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    });
+        </script>
+    
+
+
+</head>
+
+<body>
+    this is mona
+    <p>mona 1</p>
+    <p id="2">mona 2</p>
+    <p class="1">mona 3</p>
+    <p>mona 4</p>
+    <p>mona 5</p>
+    <p>mona 6</p>
+    <p>mona 7</p>
+
+
+    <div class="nirav"></div>
+    <hr>
+    <button id="b1">for db clike</button>
+    <div class="nirav1"></div>
+    <hr>
+    <div class="mona"></div><hr>
+    <input type="text" name="" id="i3">
+    <div class="ha"></div>
+    <button  id="ani"> start</button>
+    <div id="yash"></div>
+</body>
+
+
+</html>
